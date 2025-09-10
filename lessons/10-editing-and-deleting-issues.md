@@ -164,7 +164,7 @@ export default async function IssuePage({
         </div>
       </div>
 
-      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-sm p-6 mb-8">
+      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-xs p-6 mb-8">
         <div className="flex flex-wrap gap-3 mb-6">
           <Badge status={status as Status}>{getStatusLabel(status)}</Badge>
           <Badge priority={priority as Priority}>
@@ -189,7 +189,7 @@ export default async function IssuePage({
         )}
       </div>
 
-      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-sm p-6">
+      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-xs p-6">
         <h2 className="text-lg font-medium mb-2">Details</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -252,7 +252,7 @@ export default async function EditIssuePage({
 
       <h1 className="text-2xl font-bold mb-6">Edit Issue</h1>
 
-      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-sm p-6">
+      <div className="bg-white dark:bg-dark-elevated border border-gray-200 dark:border-dark-border-default rounded-lg shadow-xs p-6">
         <IssueForm userId={issue.userId} issue={issue} isEditing />
       </div>
     </div>

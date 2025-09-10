@@ -292,7 +292,7 @@ export default function PricingPage() {
         </p>
         <a
           href="mailto:sales@linearclone.com"
-          className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-700"
+          className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-blue-700"
         >
           Contact Sales
         </a>
@@ -334,7 +334,7 @@ function PricingCard({
       className={`rounded-lg p-6 ${
         highlighted
           ? 'bg-blue-900 border-2 border-blue-700 shadow-md relative'
-          : 'bg-gray-800 border border-gray-700 shadow-sm'
+          : 'bg-gray-800 border border-gray-700 shadow-xs'
       }`}
     >
       {badge && (
@@ -354,9 +354,9 @@ function PricingCard({
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
             {feature.included ? (
-              <CheckCircle2 className="h-5 w-5 text-green-300 mr-2 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 text-green-300 mr-2 shrink-0" />
             ) : (
-              <XCircle className="h-5 w-5 text-gray-500 mr-2 flex-shrink-0" />
+              <XCircle className="h-5 w-5 text-gray-500 mr-2 shrink-0" />
             )}
             <span
               className={
@@ -441,7 +441,7 @@ function FeatureCard({
   description: string
 }) {
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+    <div className="bg-gray-800 p-6 rounded-lg shadow-xs border border-gray-700">
       <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
       <p className="text-gray-400">{description}</p>
     </div>
@@ -472,7 +472,7 @@ function PlanCard({
       className={`rounded-lg p-6 ${
         highlighted
           ? 'bg-purple-900 border-2 border-purple-700 shadow-md'
-          : 'bg-gray-800 border border-gray-700 shadow-sm'
+          : 'bg-gray-800 border border-gray-700 shadow-xs'
       }`}
     >
       <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
@@ -484,7 +484,7 @@ function PlanCard({
       <ul className="space-y-3 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start text-gray-400">
-            <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+            <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 shrink-0" />
             <span>{feature}</span>
           </li>
         ))}
@@ -572,7 +572,7 @@ import Link from 'next/link'
 
 export default function SignUpPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-50 dark:bg-[#121212]">
+    <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-base">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h1 className="text-center text-3xl font-extrabold text-gray-900 dark:text-white">
           Mode
@@ -583,7 +583,7 @@ export default function SignUpPage() {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white dark:bg-[#1A1A1A] py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100 dark:border-dark-border-subtle">
+        <div className="bg-white dark:bg-[#1A1A1A] py-8 px-4 shadow-sm sm:rounded-lg sm:px-10 border border-gray-100 dark:border-dark-border-subtle">
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Already have an account?{' '}
@@ -609,7 +609,7 @@ import Link from 'next/link'
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-50 dark:bg-[#121212]">
+    <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-base">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h1 className="text-center text-3xl font-extrabold text-gray-900 dark:text-white">
           Mode
@@ -620,7 +620,7 @@ export default function SignInPage() {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white dark:bg-[#1A1A1A] py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100 dark:border-dark-border-subtle">
+        <div className="bg-white dark:bg-[#1A1A1A] py-8 px-4 shadow-sm sm:rounded-lg sm:px-10 border border-gray-100 dark:border-dark-border-subtle">
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Don&apos;t have an account?{' '}
